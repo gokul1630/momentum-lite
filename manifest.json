@@ -1,0 +1,11 @@
+{
+	"name": "momentum-lite",
+	"version": "1.0.0",
+	"description": "momentum-lite is a light-weight extension of momentum which doesn't requires any signup or email.",
+	"manifest_version": 3,
+	"author": "Gokulprasanth",
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	"permissions": ["topSites"]
+}
