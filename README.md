@@ -9,7 +9,7 @@
 - Todos
 - Daily random Quotes
 
-### Download the Chrome Extension [here](https://github.com/gokul1630/momentum-lite/blob/main/momentum-lite.crx)
+### Download the Chrome Extension [here](https://github.com/gokul1630/momentum-lite/raw/main/momentum-lite.crx)
 
 # demo
 
