@@ -5,6 +5,7 @@ import edit from './assets/edit.svg'
 import settings from './assets/settings.svg'
 import eye from './assets/eye.svg'
 import eyeOff from './assets/eyeOff.svg'
+import upload from './assets/upload.svg'
 import { Form } from './Form'
 
 const TopSiteList = ({ sites, slices, className }) => {
@@ -29,6 +30,7 @@ const App = () => {
 	const [name, setName] = useState('')
 	const [toggleTopSite, setToggleTopSite] = useState(true)
 	const [isEditName, setIsEditName] = useState(false)
+	const [backgroundImage, setBackgroundImage] = useState(background)
 	const [{ hours, minutes }, setTime] = useState({ hours: '', minutes: '' })
 	const [sites, setSites] = useState([])
 
@@ -83,12 +85,30 @@ const App = () => {
 			localStorage.setItem('topSites', '1')
 		}
 	}
+
+	const onPickBackgroundImage = (event: any) => {
+		if (event.target.files) {
+			const fileReader = new FileReader()
+			fileReader.readAsDataURL(event.target.files[0])
+			fileReader.onload = () => {
+				const imageUri = fileReader.result.toString()
+				setBackgroundImage(imageUri)
+				localStorage.setItem('backgroundImage', imageUri)
+			}
+		}
+	}
+
 	useEffect(() => {
 		setInterval(timeHandler, 1000)
 	}, [])
 
 	useLayoutEffect(() => {
 		timeHandler()
+		const image = localStorage.getItem('backgroundImage')
+		if (image) {
+			setBackgroundImage(image)
+		}
+
 		const showTopSites = parseInt(localStorage.getItem('topSites'))
 		if (showTopSites !== 1) {
 			setToggleTopSite(false)
@@ -101,9 +121,9 @@ const App = () => {
 	}, [])
 
 	return (
-		<>
+		<>	
 			<img
-				src={background}
+				src={backgroundImage}
 				alt='background image'
 				className='absolute w-screen h-screen inset-0 overflow-hidden object-cover -z-10'
 			/>
@@ -163,6 +183,20 @@ const App = () => {
 								<p className='text-base whitespace-nowrap'>
 									{!toggleTopSite ? 'Hide Top Sites' : 'Show Top Sites'}
 								</p>
+							</li>
+							<li className='flex items-center mt-3'>
+								<img src={upload} className='w-6 h-6 mr-2' alt='upload image' />
+								<label htmlFor='imagePicker'>
+									<p className='text-base whitespace-nowrap cursor-pointer'>Pick Background Image</p>
+									<input
+										onChange={onPickBackgroundImage}
+										type='file'
+										accept='image/jpeg,webp,jpg,png'
+										name='imagePicker'
+										className='hidden'
+										id='imagePicker'
+									/>
+								</label>
 							</li>
 						</ul>
 					</div>

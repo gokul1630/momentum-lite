@@ -5,7 +5,7 @@
 ### Made with React, TypeScript & TailwindCSS
 
 ### Todo
-- Custom Backgrounds 
+- ~~Custom Backgrounds~~
 - Todos
 - Daily random Quotes
 
