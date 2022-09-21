@@ -1,13 +1,17 @@
 # momentum-lite
 
 ## momentum-lite is a light-weight extension of [momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca/related) which doesn't requires any signup or email.
+#### This extension uses browser localStorage Api for database to Store everything
 
-### Made with React, TypeScript & TailwindCSS
+#
+## Made with React, TypeScript & TailwindCSS
+
 
 ### Todo
 - ~~Custom Backgrounds~~
 - Todos
 - Daily random Quotes
+- Improve UI/UX
 
 # demo
 
