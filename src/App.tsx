@@ -151,7 +151,8 @@ const App = () => {
 				)}
 				<button className='absolute bottom-10 right-10 group'>
 					<img src={settings} alt='settings' />
-					<div className='bg-white absolute right-0 bottom-0 rounded-md min-h-[2rem] min-w-[10rem] p-2 hidden group-hover:block'>
+
+					<div className='bg-white absolute right-0 bottom-0 w-max rounded-md min-h-[2rem] min-w-[10rem] p-2 hidden group-hover:block'>
 						<ul>
 							<li className='flex items-center' onClick={onEditName}>
 								<img src={edit} className='w-6 h-6 mr-2' alt='edit' />
