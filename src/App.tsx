@@ -160,7 +160,7 @@ const App = () => {
 						</div>
 
 						<ul
-							className={`list-none grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[auto,auto,auto,auto,auto] gap-x-10 relative transition duration-200 ease-in scale-0 origin-top w-full ${
+							className={`list-none max-w-2xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[auto,auto,auto,auto,auto] gap-x-10 relative transition duration-200 ease-in scale-0 origin-top w-full ${
 								!toggleTopSite && 'scale-100'
 							}`}>
 							<TopSiteList sites={sites} slices={4} className='mt-10 md:hidden' />
