@@ -174,17 +174,17 @@ const App = () => {
 
 					<div className='bg-white absolute right-0 bottom-0 w-max rounded-md min-h-[2rem] min-w-[10rem] p-2 hidden group-hover:block'>
 						<ul>
-							<li className='flex items-center' onClick={onEditName}>
+							<li className='flex items-center hover:bg-gray-200 hover:rounded pt-1 px-2' onClick={onEditName}>
 								<img src={edit} className='w-6 h-6 mr-2' alt='edit' />
 								<p className='text-base whitespace-nowrap'>Edit Name</p>
 							</li>
-							<li className='flex items-center mt-3' onClick={toggleTopSites}>
+							<li className='flex items-center mt-3 hover:bg-gray-200 hover:rounded py-1 px-2' onClick={toggleTopSites}>
 								<img src={!toggleTopSite ? eyeOff : eye} className='w-6 h-6 mr-2' alt='edit' />
 								<p className='text-base whitespace-nowrap'>
 									{!toggleTopSite ? 'Hide Top Sites' : 'Show Top Sites'}
 								</p>
 							</li>
-							<li className='flex items-center mt-3'>
+							<li className='flex items-center mt-3 hover:bg-gray-200 hover:rounded pb-1 px-2'>
 								<img src={upload} className='w-6 h-6 mr-2' alt='upload image' />
 								<label htmlFor='imagePicker'>
 									<p className='text-base whitespace-nowrap cursor-pointer'>Pick Background Image</p>
