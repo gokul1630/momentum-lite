@@ -1,10 +1,15 @@
 import { ChangeEvent } from 'react'
 
 export interface FormProps {
+	/** submit handler */
 	onSubmit: (e?: any) => void
+	/** cancel handler */
 	onCancel: () => void
+	/** input value */
 	inputValue: any
+	/** input handler */
 	inputHandler: (e: ChangeEvent<HTMLInputElement>) => void
+	/** name */
 	name: string
 }
 
